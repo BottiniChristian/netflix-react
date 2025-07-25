@@ -10,4 +10,4 @@ const MovieCard = ({ poster, title }) => {
     </div>
   )
 }
-export default MovieCard;
+export default MovieCard

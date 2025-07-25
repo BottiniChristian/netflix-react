@@ -55,7 +55,7 @@ const SeriesGallery = ({ title }) => {
     <div className="container mt-4">
       <h4 className="section-title">{title}</h4>
       {loading ? <Loader /> : error ? <Error /> : (
-        <div className="d-flex gap-3 overflow-auto" style={{ whiteSpace: 'nowrap' }}>
+        <div className="series-card d-flex gap-3 overflow-auto" style={{ whiteSpace: 'nowrap' }}>
           {series.map((show) => (
             <MovieCard
               key={show.imdbID}

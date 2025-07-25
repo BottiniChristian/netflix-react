@@ -14,12 +14,9 @@
 }
 .movie-card small {
   margin-top: 8px;
-  z-index: 1; /* solo se serve */
+  z-index: 1; 
   position: relative;
 }
-
-
-
 body {
 background-color: black;
 color: white;
@@ -29,9 +26,16 @@ background-color: black;
 }
 .movie-row img {
 width: 100%;
-transition: transform 0.2s ease;
+transition: transform 0.3s ease;
 }
 .movie-row img:hover {
+transform: scale(1.05);
+}
+.series-card img {
+width: 100%;
+transition: transform 0.3s ease;
+}
+.series-card img:hover {
 transform: scale(1.05);
 }
 .section-title {
