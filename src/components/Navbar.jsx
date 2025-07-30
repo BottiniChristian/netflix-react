@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark px-3 bg-black">
       <Link to="/">
-        <img src="./image/netflix_logo copia.png" height="40" alt="logo" />
+        <img src="/image/netflix_logo copia.png" height="40" alt="logo" />
       </Link>
 
       <div className="collapse navbar-collapse">
@@ -31,14 +31,15 @@ const Navbar = () => {
           ></i>
           {showSearch && <div style={{ width: '200px', marginRight: "5px" }}>
             <SearchBar />
-            </div>}
+          </div>}
           <span className="me-3">KIDS</span>
           <i className="fas fa-bell text-white me-3"></i>
-          <a href="/profile.html"><img src="./image/avatar copia.png" height="30px" alt="avatar" /></a>
+          <Link to="/profile.html">
+            <img src="/image/avatar copia.png" height="30" alt="avatar" />
+          </Link>
         </div>
       </div>
     </nav>
   );
 };
-
 export default Navbar;
