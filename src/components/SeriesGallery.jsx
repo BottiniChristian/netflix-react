@@ -13,8 +13,14 @@ const seriesQueries = [
   "friends",
   "breaking bad",
   "the witcher",
-  "dark"
+  "dark",
+  "black mirror",
+  "sherlock",
+  "house of cards",
+  "narcos",
+  "peaky blinders"
 ];
+
 
 const SeriesGallery = ({ title }) => {
   const [series, setSeries] = useState([]);
@@ -35,9 +41,15 @@ const SeriesGallery = ({ title }) => {
         );
 
         const merged = results.flat();
-        const uniqueSeries = merged.filter((item, index, self) =>
-          index === self.findIndex((t) => t.imdbID === item.imdbID)
-        );
+        const uniqueSeries = [];
+        const seenIds = new Set();
+
+        merged.forEach(item => {
+         if (!seenIds.has(item.imdbID)) {
+             seenIds.add(item.imdbID);
+             uniqueSeries.push(item);
+         }
+       });
 
         setSeries(uniqueSeries);
       } catch (err) {
@@ -61,6 +73,7 @@ const SeriesGallery = ({ title }) => {
               key={show.imdbID}
               poster={show.Poster}
               title={show.Title}
+              id={show.imdbID}
             />
           ))}
         </div>

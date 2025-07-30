@@ -42,7 +42,12 @@ const MovieGallery = ({ title, query }) => {
       ) : (
         <div className="movie-row d-flex overflow-auto gap-3 py-2">
           {movies.slice(0, 10).map(movie => (
-            <MovieCard key={movie.imdbID} poster={movie.Poster} title={movie.Title} />
+            <MovieCard
+              key={movie.imdbID}
+              poster={movie.Poster}
+              title={movie.Title}
+              id={movie.imdbID}
+            />
           ))}
         </div>
       )}

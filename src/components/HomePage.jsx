@@ -22,7 +22,6 @@ const HomePage = () => (
     <MovieGallery title="Movie Night" query="lord of the rings" />
     <MovieGallery title="You Might Also Like" query="avengers" />
     <MovieGallery title="Why Did You Watch : Star Wars VIII - The Last Jedi" query="star wars" />
-    <SeriesGallery title="Popular Top Series" />
 
     <Footer />
   </>
